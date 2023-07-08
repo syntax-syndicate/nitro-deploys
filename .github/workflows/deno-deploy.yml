@@ -32,7 +32,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: nitro-deployment # the name of the project on Deno Deploy
-          entrypoint: server/index.ts
+          entrypoint: .output/server/index.ts
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       - name: Test deployed site
